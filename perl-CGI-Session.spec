@@ -7,7 +7,7 @@
 Summary:	CGI::Session - Persistent storage of complex data in CGI
 Summary(pl):	CGI::Session - Trwa³e przechowywanie z³o¿onych struktur danych w CGI
 Name:		perl-CGI-Session
-Version:	2.94
+Version:	3.11
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
@@ -16,6 +16,9 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-26
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Digest-MD5
+BuildRequires:	perl-DB_File
+BuildRequires:	perl-FreezeThaw
+BuildRequires:	perl-Storable
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,12 +33,10 @@ zarz±dzania trwa³± sesj± pomiêdzy zapytaniami HTTP.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-mv doc/Session.pod .
 
 %build
 perl Makefile.PL
 %{__make}
-pod2man doc/cgisessioncook.pod --section 3pm > blib/man3/cgisessioncook.3pm
 
 %{!?_without_tests:%{__make} test}
 
