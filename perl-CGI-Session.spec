@@ -1,20 +1,21 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
 %define	pnam	Session
-Summary:	CGI::Session - Persistent storage of complex data in CGI
-Summary(pl):	CGI::Session - Trwa³e przechowywanie z³o¿onych struktur danych w CGI
+Summary:	CGI::Session - persistent storage of complex data in CGI
+Summary(pl):	CGI::Session - trwa³e przechowywanie z³o¿onych struktur danych w CGI
 Name:		perl-CGI-Session
-Version:	3.92
-Release:	2
+Version:	3.93
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.0.2-104
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if 0%{!?_without_tests:1}
 BuildRequires:	perl-Digest-MD5
 BuildRequires:	perl-DB_File
 BuildRequires:	perl-FreezeThaw
