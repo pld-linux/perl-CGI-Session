@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
@@ -17,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	fe9e46496c7c711c54ca13209ded500b
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if 0%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-Digest-MD5
 BuildRequires:	perl-DB_File
 BuildRequires:	perl-FreezeThaw
@@ -42,7 +42,7 @@ zarz±dzania trwa³± sesj± pomiêdzy zapytaniami HTTP.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
