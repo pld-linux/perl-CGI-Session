@@ -7,7 +7,7 @@
 Summary:	CGI::Session - Persistent storage of complex data in CGI
 Summary(pl):	CGI::Session - Trwa³e przechowywanie z³o¿onych struktur danych w CGI
 Name:		perl-CGI-Session
-Version:	3.11
+Version:	3.91
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
