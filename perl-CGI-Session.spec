@@ -10,7 +10,8 @@ Summary(pl):	CGI::Session - trwa³e przechowywanie z³o¿onych struktur danych w CG
 Name:		perl-CGI-Session
 Version:	3.95
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	fe9e46496c7c711c54ca13209ded500b
