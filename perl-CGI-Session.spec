@@ -55,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/%{pdir}/*.pm
-%{perl_vendorlib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/CGI/*.pm
+%{perl_vendorlib}/CGI/Session
 %{_mandir}/man3/*
