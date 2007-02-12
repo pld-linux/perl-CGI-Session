@@ -6,7 +6,7 @@
 %define		pdir	CGI
 %define		pnam	Session
 Summary:	CGI::Session - persistent storage of complex data in CGI
-Summary(pl):	CGI::Session - trwa³e przechowywanie z³o¿onych struktur danych w CGI
+Summary(pl.UTF-8):   CGI::Session - trwaÅ‚e przechowywanie zÅ‚oÅ¼onych struktur danych w CGI
 Name:		perl-CGI-Session
 Version:	4.13
 Release:	1
@@ -32,9 +32,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 CGI::Session is Perl5 library that provides an easy persistent session
 management system across HTTP requests.
 
-%description -l pl
-CGI::Session jest bibliotek± dla Perla5, udostêpniaj±c± ³atwy system
-zarz±dzania trwa³± sesj± pomiêdzy zapytaniami HTTP.
+%description -l pl.UTF-8
+CGI::Session jest bibliotekÄ… dla Perla5, udostÄ™pniajÄ…cÄ… Å‚atwy system
+zarzÄ…dzania trwaÅ‚Ä… sesjÄ… pomiÄ™dzy zapytaniami HTTP.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
