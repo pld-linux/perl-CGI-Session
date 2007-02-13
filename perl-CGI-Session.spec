@@ -6,7 +6,7 @@
 %define		pdir	CGI
 %define		pnam	Session
 Summary:	CGI::Session - persistent storage of complex data in CGI
-Summary(pl.UTF-8):   CGI::Session - trwałe przechowywanie złożonych struktur danych w CGI
+Summary(pl.UTF-8):	CGI::Session - trwałe przechowywanie złożonych struktur danych w CGI
 Name:		perl-CGI-Session
 Version:	4.13
 Release:	1
