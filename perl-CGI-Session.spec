@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	CGI
@@ -8,13 +8,13 @@
 Summary:	CGI::Session - persistent storage of complex data in CGI
 Summary(pl.UTF-8):	CGI::Session - trwałe przechowywanie złożonych struktur danych w CGI
 Name:		perl-CGI-Session
-Version:	4.40
+Version:	4.41
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9be26b2fbfa281faf7fbba319bdf3a7f
+# Source0-md5:	e61bedf99c721167e3f3029710b3b7fc
 URL:		http://search.cpan.org/dist/CGI-Session/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
