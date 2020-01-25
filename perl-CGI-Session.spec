@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	CGI
 %define		pnam	Session
 Summary:	CGI::Session - persistent storage of complex data in CGI
